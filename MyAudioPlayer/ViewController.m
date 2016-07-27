@@ -94,12 +94,7 @@
 
 - (IBAction)lastSong:(id)sender {
     
-    _tempIndex--;
-    NSString *path = [[NSBundle mainBundle] pathForResource:_nameArr[_tempIndex] ofType:@"mp3"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    _audioPlayer.volume = _volumeSlider.value;
-    [_audioPlayer play];
+    [self changeToLastSong];
 }
 
 - (IBAction)playSong:(id)sender {
@@ -123,6 +118,17 @@
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     _audioPlayer.volume = _volumeSlider.value;
     [_audioPlayer play];
+}
+
+- (void)changeToLastSong {
+    
+    _tempIndex--;
+    NSString *path = [[NSBundle mainBundle] pathForResource:_nameArr[_tempIndex] ofType:@"mp3"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    _audioPlayer.volume = _volumeSlider.value;
+    [_audioPlayer play];
+    
 }
 
 #pragma mark - UITableViewDelegate & DataSource
@@ -162,6 +168,7 @@
     if (motion == UIEventSubtypeMotionShake) {
         
         //更换下一首
+        [self changeToLastSong];
     }
 }
 
