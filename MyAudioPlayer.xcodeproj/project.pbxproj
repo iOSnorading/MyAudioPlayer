@@ -15,6 +15,10 @@
 		DB153C8E1D2BB0FA00952407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB153C8C1D2BB0FA00952407 /* LaunchScreen.storyboard */; };
 		DB153C991D2BB0FA00952407 /* MyAudioPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB153C981D2BB0FA00952407 /* MyAudioPlayerTests.m */; };
 		DB153CA41D2BB0FA00952407 /* MyAudioPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB153CA31D2BB0FA00952407 /* MyAudioPlayerUITests.m */; };
+		DB153CB21D2BB17600952407 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB153CB11D2BB17600952407 /* AVFoundation.framework */; };
+		DB153CB41D2BB8AF00952407 /* 卢西-赤道和北极.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB153CB31D2BB8AF00952407 /* 卢西-赤道和北极.mp3 */; };
+		DB153CB61D2BB8C100952407 /* 吴亦凡-时间煮雨.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB153CB51D2BB8C100952407 /* 吴亦凡-时间煮雨.mp3 */; };
+		DB153CB81D2BB8D200952407 /* 严艺丹-三寸天堂.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB153CB71D2BB8D200952407 /* 严艺丹-三寸天堂.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		DB153C9F1D2BB0FA00952407 /* MyAudioPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAudioPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB153CA31D2BB0FA00952407 /* MyAudioPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAudioPlayerUITests.m; sourceTree = "<group>"; };
 		DB153CA51D2BB0FA00952407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB153CB11D2BB17600952407 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DB153CB31D2BB8AF00952407 /* 卢西-赤道和北极.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "卢西-赤道和北极.mp3"; sourceTree = "<group>"; };
+		DB153CB51D2BB8C100952407 /* 吴亦凡-时间煮雨.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "吴亦凡-时间煮雨.mp3"; sourceTree = "<group>"; };
+		DB153CB71D2BB8D200952407 /* 严艺丹-三寸天堂.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "严艺丹-三寸天堂.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB153CB21D2BB17600952407 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 		DB153C721D2BB0FA00952407 = {
 			isa = PBXGroup;
 			children = (
+				DB153CB11D2BB17600952407 /* AVFoundation.framework */,
 				DB153C7D1D2BB0FA00952407 /* MyAudioPlayer */,
 				DB153C971D2BB0FA00952407 /* MyAudioPlayerTests */,
 				DB153CA21D2BB0FA00952407 /* MyAudioPlayerUITests */,
@@ -117,6 +127,9 @@
 		DB153C7E1D2BB0FA00952407 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DB153CB31D2BB8AF00952407 /* 卢西-赤道和北极.mp3 */,
+				DB153CB51D2BB8C100952407 /* 吴亦凡-时间煮雨.mp3 */,
+				DB153CB71D2BB8D200952407 /* 严艺丹-三寸天堂.mp3 */,
 				DB153C7F1D2BB0FA00952407 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -244,8 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB153C8E1D2BB0FA00952407 /* LaunchScreen.storyboard in Resources */,
+				DB153CB81D2BB8D200952407 /* 严艺丹-三寸天堂.mp3 in Resources */,
+				DB153CB61D2BB8C100952407 /* 吴亦凡-时间煮雨.mp3 in Resources */,
 				DB153C8B1D2BB0FA00952407 /* Assets.xcassets in Resources */,
 				DB153C891D2BB0FA00952407 /* Main.storyboard in Resources */,
+				DB153CB41D2BB8AF00952407 /* 卢西-赤道和北极.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,10 +427,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiaming Liu (4L7374827E)";
 				INFOPLIST_FILE = MyAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ding.cn.MyAudioPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = "con.norading-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0115b050-b9cf-4bfa-bc69-68820ffecb35";
 			};
 			name = Debug;
 		};
@@ -422,10 +441,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiaming Liu (4L7374827E)";
 				INFOPLIST_FILE = MyAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ding.cn.MyAudioPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = "con.norading-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0115b050-b9cf-4bfa-bc69-68820ffecb35";
 			};
 			name = Release;
 		};
@@ -496,6 +518,7 @@
 				DB153CAA1D2BB0FA00952407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB153CAB1D2BB0FA00952407 /* Build configuration list for PBXNativeTarget "MyAudioPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +527,7 @@
 				DB153CAD1D2BB0FA00952407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB153CAE1D2BB0FA00952407 /* Build configuration list for PBXNativeTarget "MyAudioPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +536,7 @@
 				DB153CB01D2BB0FA00952407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
